@@ -1,0 +1,136 @@
+/* style.css */
+body {
+    font-family: sans-serif; /* 設定一個安全的無襯線字體 */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+nav {
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0066cc;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.content-section {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.content-section h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+.section-description {
+    font-style: italic;
+    color: #555;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+details {
+    margin-top: 15px;
+    background-color: #eef;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* 原有的樣式保持不變，以下是新增的媒體查詢 */
+
+/* 當螢幕寬度小於或等於 600px 時 (適用於多數手機) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* 減少手機上的頁面邊距，充分利用空間 */
+    }
+
+    nav {
+        flex-direction: column; /* 導航連結改為垂直堆疊 */
+        align-items: stretch;    /* 讓連結寬度撐滿容器 */
+        gap: 5px;                /* 連結之間的間距縮小 */
+    }
+
+    nav a {
+        text-align: center;      /* 連結文字置中 */
+        padding: 12px 5px;       /* 增加垂直內距，方便手指點擊 */
+        background-color: #e0e0e0; /* 可選：加上淺色背景區分按鈕 */
+        border-radius: 4px;
+    }
+
+    /* 讓內容區塊的內距稍微縮小，節省空間 */
+    .content-section {
+        padding: 15px;
+    }
+
+    /* 調整標題字型大小，避免過大 */
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+
+    /* 步驟列表左邊距稍微縮小 */
+    ol {
+        padding-left: 20px;
+    }
+
+    /* 可收合區域的內距調整 */
+    details {
+        padding: 8px;
+    }
+
+    /* 頁尾字型稍微縮小 */
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+/* 如果需要支援更小的螢幕 (如摺疊手機，小於 400px)，可再加入一層 */
+@media (max-width: 400px) {
+    body {
+        padding: 5px;
+    }
+
+    nav a {
+        padding: 10px 5px;
+        font-size: 0.9rem;
+    }
+
+    .content-section h2 {
+        font-size: 1.3rem;
+    }
+}

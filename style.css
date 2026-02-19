@@ -72,6 +72,12 @@ footer {
     color: #777;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* 可選，移除圖片下方的空白間距 */
+}
+
 /* 原有的樣式保持不變，以下是新增的媒體查詢 */
 
 /* 當螢幕寬度小於或等於 600px 時 (適用於多數手機) */
@@ -116,6 +122,12 @@ footer {
     /* 頁尾字型稍微縮小 */
     footer {
         font-size: 0.8em;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block; /* 可選，移除圖片下方的空白間距 */
     }
 }
 

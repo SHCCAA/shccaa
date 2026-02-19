@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澳門○○中學學生會 · 成立沿革</title>
+    <!-- Font Awesome 6 (免費) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f5f7fa;
+            color: #1e2b3c;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* 頁首 */
+        .hero {
+            background: linear-gradient(145deg, #004d73 0%, #0083b0 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            border-radius: 0 0 3rem 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 25px rgba(0,77,115,0.2);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+            font-weight: 300;
+        }
+
+        .hero .established {
+            display: inline-block;
+            background-color: rgba(255,255,255,0.15);
+            padding: 0.5rem 1.8rem;
+            border-radius: 50px;
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* 章節標題 */
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #0a2942;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: #0083b0;
+            border-radius: 2px;
+        }
+
+        /* 卡片區 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #e0e7ed;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 28px rgba(0, 77, 115, 0.08);
+            border-color: #b3d1e0;
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: #0083b0;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #0a2942;
+        }
+
+        .card p {
+            color: #2c4a6a;
+        }
+
+        /* 時間軸 */
+        .timeline {
+            margin: 3rem 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #cbd5e1;
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 70px;
+            margin-bottom: 2.5rem;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 12px;
+            top: 0;
+            width: 28px;
+            height: 28px;
+            background: #0083b0;
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 2;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            border: 1px solid #e6edf3;
+        }
+
+        .timeline-content h4 {
+            font-size: 1.3rem;
+            color: #0a2942;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content .date {
+            color: #0083b0;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        /* 幹部名單 */
+        .leaders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.8rem;
+            margin-top: 2rem;
+        }
+
+        .leader-card {
+            text-align: center;
+            background: white;
+            padding: 1.5rem 0.8rem;
+            border-radius: 1.2rem;
+            border: 1px solid #dee8f0;
+            transition: all 0.2s;
+        }
+
+        .leader-card:hover {
+            border-color: #0083b0;
+            box-shadow: 0 6px 14px rgba(0,131,176,0.1);
+        }
+
+        .leader-card .avatar {
+            width: 90px;
+            height: 90px;
+            background: #d4e3ed;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            color: #2c4a6a;
+            border: 3px solid white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .leader-card h4 {
+            font-size: 1.2rem;
+            color: #0a2942;
+        }
+
+        .leader-card .role {
+            color: #0083b0;
+            font-weight: 500;
+            margin: 0.25rem 0 0.5rem;
+        }
+
+        .leader-card .term {
+            color: #3c5a7a;
+            font-size: 0.9rem;
+        }
+
+        /* 聯絡區域 */
+        .contact-block {
+            background: #e1f0f7;
+            padding: 2.5rem;
+            border-radius: 2rem;
+            margin: 4rem 0;
+            border: 1px solid #b9d8e9;
+        }
+
+        .contact-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #0083b0;
+        }
+
+        /* 頁尾 */
+        .footer {
+            background: #0a2942;
+            color: #b0c8dd;
+            text-align: center;
+            padding: 2rem;
+            border-radius: 3rem 3rem 0 0;
+            margin-top: 4rem;
+        }
+
+        .footer a {
+            color: #9ab8d4;
+            text-decoration: none;
+            border-bottom: 1px dotted #3d5e7e;
+        }
+
+        .footer a:hover {
+            color: white;
+            border-bottom-color: white;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 2.2rem; }
+            .section-title { font-size: 1.8rem; }
+            .timeline::before { left: 20px; }
+            .timeline-item { padding-left: 60px; }
+            .timeline-marker { left: 8px; width: 24px; height: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- 首頁英雄區 -->
+    <section class="hero">
+        <div class="container">
+            <h1>澳門○○中學 · 學生會</h1>
+            <div class="subtitle">傳承 · 服務 · 橋樑</div>
+            <div class="established">
+                <i class="fas fa-calendar-alt" style="margin-right: 8px;"></i> 成立於 1995 年 · 與校園共同成長
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- 簡介 -->
+        <section>
+            <h2 class="section-title">關於我們</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #1e3b4f;">
+                澳門○○中學學生會自一九九五年創立至今，一直秉持「服務同學、關心社會、連繫校園」的宗旨，
+                作為全校最大的學生組織，我們致力促進師生溝通，維護學生合理權益，並舉辦多元化的課外活動，
+                豐富同學的校園生活。
+            </p>
+            <p style="color: #2c4a6a;">
+                從最初僅數十名創會成員，發展至今涵蓋初中及高中六個年級，學生會每年透過民主選舉產生幹事會，
+                下設文康、學術、總務、宣傳、外聯等部門，另設監事會負責監督會務。多年來我們積極參與澳門學界聯校活動，
+                並與教育及青年發展局保持良好互動，體現澳門學生的自主與承擔。
+            </p>
+        </section>
+
+        <!-- 核心價值卡片（中學版本） -->
+        <div class="card-grid">
+            <div class="card">
+                <i class="fas fa-users"></i>
+                <h3>校園凝聚</h3>
+                <p>舉辦水運會、班際球賽、歌唱大賽，建立班與班之間的友誼，讓校園充滿活力。</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-bullhorn"></i>
+                <h3>權益發聲</h3>
+                <p>定期收集同學意見，與校方舉行座談會，改善校園設施與午餐安排，做大家的傳聲筒。</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>社區關懷</h3>
+                <p>組織義工隊探訪長者、參與公益園遊會，將澳門學生的愛心傳遞到社區。</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>領袖培訓</h3>
+                <p>開辦幹事訓練營、溝通技巧工作坊，讓同學在服務中學習領導，為未來做好準備。</p>
+            </div>
+        </div>
+
+        <!-- 成立里程碑（加入澳門特色） -->
+        <section style="margin-top: 3rem;">
+            <h2 class="section-title">學生會大事記</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-marker"></span>
+                    <div class="timeline-content">
+                        <span class="date">1995 年 10 月</span>
+                        <h4>學生會正式成立</h4>
+                        <p>由當年幾位熱心同學發起，獲校方支持，第一屆幹事會誕生，會址設於舊校舍G02室。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-marker"></span>
+                    <div class="timeline-content">
+                        <span class="date">1999 年 12 月</span>
+                        <h4>回歸慶祝活動</h4>
+                        <p>組織全校同學參與澳門回歸祖國慶典，並在校內舉辦「喜迎回歸」壁報設計比賽。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-marker"></span>
+                    <div class="timeline-content">
+                        <span class="date">2005 年</span>
+                        <h4>增設「學界聯絡部」</h4>
+                        <p>為加強與其他中學的交流，學生會增設外聯職位，開始參與澳門學界聯會活動。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-marker"></span>
+                    <div class="timeline-content">
+                        <span class="date">2013 年</span>
+                        <h4>新校舍搬遷</h4>
+                        <p>跟隨學校搬遷至現址，學生會辦公室擴充至三百平方呎，並設立校園電視台。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-marker"></span>
+                    <div class="timeline-content">
+                        <span class="date">2023 年</span>
+                        <h4>獲澳門基金會贊助</h4>
+                        <p>學生會計劃「校園美化工程」獲得澳門基金會資助，增設休憩空間及環保回收站。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 近五屆會長 (澳門人名) -->
+        <section style="margin-top: 4rem;">
+            <h2 class="section-title">近五屆學生會會長</h2>
+            <div class="leaders-grid">
+                <div class="leader-card">
+                    <div class="avatar"><i class="fas fa-user-tie"></i></div>
+                    <h4>何嘉欣</h4>
+                    <div class="role">第 29 屆會長</div>
+                    <div class="term">2024 - 2025</div>
+                </div>
+                <div class="leader-card">
+                    <div class="avatar"><i class="fas fa-user-tie"></i></div>
+                    <h4>陳焯賢</h4>
+                    <div class="role">第 28 屆會長</div>
+                    <div class="term">2023 - 2024</div>
+                </div>
+                <div class="leader-card">
+                    <div class="avatar"><i class="fas fa-user-tie"></i></div>
+                    <h4>吳嘉麗</h4>
+                    <div class="role">第 27 屆會長</div>
+                    <div class="term">2022 - 2023</div>
+                </div>
+                <div class="leader-card">
+                    <div class="avatar"><i class="fas fa-user-tie"></i></div>
+                    <h4>羅子軒</h4>
+                    <div class="role">第 26 屆會長</div>
+                    <div class="term">2021 - 2022</div>
+                </div>
+                <div class="leader-card">
+                    <div class="avatar"><i class="fas fa-user-tie"></i></div>
+                    <h4>李詠恩</h4>
+                    <div class="role">第 25 屆會長</div>
+                    <div class="term">2020 - 2021</div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; color: #3c5a7a;">
+                <i class="fas fa-chevron-circle-right" style="margin-right: 6px;"></i>
+                更多歷屆幹部名單可於學生會辦公室查閱
+            </p>
+        </section>
+
+        <!-- 聯絡方式 (澳門風格) -->
+        <section class="contact-block">
+            <h2 style="font-size: 2rem; margin-bottom: 0.5rem; color: #0a2942;">聯繫我們</h2>
+            <p style="font-size: 1.1rem;">無論意見、查詢或想加入學生會，歡迎透過以下方式搵我哋！</p>
+            <div class="contact-flex">
+                <div class="contact-item">
+                    <i class="fas fa-location-dot"></i>
+                    <span>澳門○○大馬路○○中學 · 地下G01室</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>(+853) 2828 1234 (內線 118)</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>su@○○school.edu.mo</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-facebook"></i>
+                    <span>fb.com/○○su</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-instagram"></i>
+                    <span>@○○su_official</span>
+                </div>
+            </div>
+            <p style="margin-top: 2rem; font-size: 0.95rem; color: #1f4b6e;">
+                <i class="fas fa-clock"></i> 辦公時間：星期一至五 12:30 - 13:30、16:00 - 17:30
+            </p>
+        </section>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <div class="container">
+            <p style="margin-bottom: 1rem;">澳門○○中學學生會 · 保留一切權利</p>
+            <p style="font-size: 0.9rem;">
+                本網站使用 GitHub Pages 發佈 · 最後更新：2026年2月<br>
+                <a href="#">私隱條款</a> · <a href="#">學生會會章</a> · <a href="#">回到頂部</a>
+            </p>
+            <p style="margin-top: 1.5rem; font-size: 0.8rem;">
+                <i class="fas fa-map-pin"></i> 澳門特別行政區 · 教育與青年發展局註冊學生組織
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

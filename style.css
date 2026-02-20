@@ -371,7 +371,7 @@ img {
 .footer-col h4 {
     font-size: 1.2rem;
     margin-bottom: 20px;
-    border-bottom: 2px solid #ffcc00;
+    border-bottom: 2px solid white;
     padding-bottom: 10px;
     display: inline-block;
 }
@@ -384,7 +384,7 @@ img {
 }
 
 .footer-col a:hover {
-    color: #ffcc00;
+    color: white;
 }
 
 .social-links {
@@ -394,7 +394,7 @@ img {
 }
 
 .social-links a {
-    background: red;
+    background: white;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -405,7 +405,7 @@ img {
 }
 
 .social-links a:hover {
-    background: #ffcc00;
+    background: white;
     color: #003366;
 }
 

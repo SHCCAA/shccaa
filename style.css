@@ -356,8 +356,8 @@ img {
 
 /* ---------- 頁尾 ---------- */
 .footer {
-    background-color: #003366;
-    color: white;
+    background-color: #b0e3f7;
+    color: #003366;
     padding: 60px 0 20px;
 }
 
@@ -377,7 +377,7 @@ img {
 }
 
 .footer-col p, .footer-col a {
-    color: rgba(255,255,255,0.8);
+    color: #003366;
     text-decoration: none;
     line-height: 2;
     display: block;
@@ -394,7 +394,7 @@ img {
 }
 
 .social-links a {
-    background: rgba(255,255,255,0.1);
+    background: red;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -413,7 +413,7 @@ img {
     text-align: center;
     padding-top: 20px;
     border-top: 1px solid rgba(255,255,255,0.1);
-    color: rgba(255,255,255,0.6);
+    color: #003366;
     font-size: 0.9rem;
 }
 

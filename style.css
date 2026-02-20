@@ -77,7 +77,7 @@ img {
 /* 手機版漢堡選單按鈕 */
 .mobile-menu-btn {
     display: none;
-    color: white;
+    color: #003366;
     font-size: 2rem;
     cursor: pointer;
     width: 40px;
